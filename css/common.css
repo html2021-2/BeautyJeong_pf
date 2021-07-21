@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 신디나루;
+  font-style: normal;
+  font-weight: 600;
+  src: local("a신디나루B"), url("../fonts/sindinaru/a신디나루B.ttf") format("truetype"); }
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Rubik"), url("../fonts/Rubik/static/Rubik-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 600;
+  src: local("Rubik"), url("../fonts/Rubik/static/Rubik-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: Tourney;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Tourney"), url("../fonts/Tourney/static/Tourney/Tourney-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: Tourney;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Tourney"), url("../fonts/Tourney/static/Tourney/Tourney-LightItalic.ttf") format("truetype"); }
+@font-face {
+  font-family: Tourney;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Tourney"), url("../fonts/Tourney/static/Tourney/Tourney-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: Tourney;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Tourney"), url("../fonts/Tourney/static/Tourney/Tourney-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.eot");
+  src: local("Noto Sans KR"), url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.woff") format("woff"), url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf") format("opentype"), url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.svg#NotoSansKR") format("svg"); }
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.eot");
+  src: local("Noto Sans KR"), url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.woff") format("woff"), url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.otf") format("opentype"), url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.svg#NotoSansKR") format("svg"); }
+body, p, ul, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+img {
+  vertical-align: top;
+  border: none; }
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit; }
+
+.blind {
+  width: 1px;
+  height: 1px;
+  border: none;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); }
+
+body {
+  font-family: "신디나루", "굴림", "NotoSansKR";
+  font-weight: 600;
+  color: #7E725C;
+  font-size: 30px;
+  line-height: 2;
+  word-break: keep-all; }
+
+/*# sourceMappingURL=common.css.map */
