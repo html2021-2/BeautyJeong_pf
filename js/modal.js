@@ -41,7 +41,7 @@ $(document).ready(function () {
       //닫기버튼 클릭하면
       $closeBtn.on('click', function () {
         $('html, body').removeAttr('style');
-        $dim.stop().fadeOut('fast',function () {
+        $dim.stop().fadeOut(function () {
           $(this).remove(); //dim이 여러개 생기는 것 방지
         });
         $modalBg.removeClass('on').next().removeClass('on');

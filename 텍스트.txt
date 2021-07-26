@@ -1,3 +1,8 @@
+index=====
+Beauty's Portfolio
+- 뷰티의 텃밭에 오신 것을 환영합니다. -    
+Copyright© 2021 Beauty_Jeong. All rights reserved
+
 =====sub common=====
 Contact
 About Beauty

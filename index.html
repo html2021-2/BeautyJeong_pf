@@ -1,19 +1,106 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Beauty's Portfolio </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon16.ico">
   <link rel="icon" href="images/favicon32.ico">
   <link rel="shortcut icon" href="images/favicon96.ico"><!-- 안드로이드 -->
   <link rel="apple-touch-icon" href="images/favicon96.ico"><!-- 애플 -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
+
 <body>
-  <div id="sky"></div>
-  <div id="wrap"></div>
+  <div id="wrap">
+    <div id="sky">
+      <div class="txtbox">
+        <h1>Beauty's Portfolio</h1>
+        <p>- 뷰티의 텃밭에 오신 것을 환영합니다. -</p>
+      </div>
+      <p class="copyright">Copyright© 2021 Beauty_Jeong. All rights reserved</p>
+      <!-- 페럴렉스 : 구름, 태양, 산-->
+      <div class="parallax">
+        <div class="sun"></div>
+        <div class="moveani">
+          <div class="cloud1"></div>
+          <div class="cloud2"></div>
+          <div class="cloud3"></div>
+          <div class="cloud4"></div>
+        </div>
+        <div class="mountain">
+          <div class="mt1"></div>
+          <div class="mt2"></div>
+          <div class="mt3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg bg_up">
+      <div class="me">
+        <div class="arm"></div>
+        <div class="mouse"></div>
+      </div>
+      <div class="dog"></div>
+      <div class="apple_drop">
+        <div class="apple1"></div>
+        <div class="apple2"></div>
+      </div>
+      <div class="sprout">
+        <div class="sprout1"></div>
+        <div class="sprout2"></div>
+        <div class="sprout3"></div>
+        <div class="sprout4"></div>
+      </div>
+      <p>
+        뷰티의 텃밭에는<br>
+        무슨 일이 일어나고<br>
+        있을까요~?
+      </p>
+    </div>
+
+    <div class="menu_wrap">
+      <span class="blind">전체메뉴</span>
+      <ul class="menu"><!-- 줌인, 돋보기 -->
+        <li>
+          <a href="sub/sub_beauty.html" class="about_beauty go_link">
+            <span>About Beauty</span>
+          <div class="circle"></div>
+          </a>
+        </li>
+        <li>
+          <a href="sub/sub_skill.html" class="skill go_link">
+            <span>Skill</span>
+            <div class="circle"></div>
+          </a>
+        </li>
+        <li>
+          <a href="sub/sub_project.html" class="project go_link">
+            <span>Project</span>
+            <div class="circle"></div>
+          </a>
+        </li>
+        <li>
+          <a href="sub/sub_contact.html" class="contact go_link">
+            <span>Contact</span>
+            <div class="circle"></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg bg_down"></div>    
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,IAAI;EAAC,MAAM,EAAE,CAAC;EAAC,OAAO,EAAE,CAAC;EAAC,KAAK,EAAE,IAAI;EAAC,MAAM,EAAE,IAAI;EAAC,UAAU,EAAE,IAAI;;AACnE,MAAM;EAAC,KAAK,EAAE,IAAI;EAAC,MAAM,EAAE,IAAI",
+"sources": ["project_bg.scss"],
+"names": [],
+"file": "project_bg.css"
+}
