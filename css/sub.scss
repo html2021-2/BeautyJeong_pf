@@ -24,7 +24,7 @@
   @include flex;
   @include justify-content;
   @include align-items;
-  position: fixed;width: 80px;height: 80px;top: 7%;left: 5%;border-radius: 50%;background: rgba(251, 229, 25, .8);box-shadow: 0px 0px 27px 20px rgba(251, 229, 25, 0.8);font-size: 25px; /* offset-x | offset-y | blur-radius | spread-radius | color */
+  position: fixed;z-index: 500; width: 80px;height: 80px;top: 7%;left: 5%;border-radius: 50%;background: rgba(251, 229, 25, .8);box-shadow: 0px 0px 27px 20px rgba(251, 229, 25, 0.8);font-size: 25px; /* offset-x | offset-y | blur-radius | spread-radius | color */
 }
 .speech_bubble{
     @include flex;
@@ -529,8 +529,8 @@
   }
 }
 
-//ikea=====
-.ikea_intro{
+//twosome=====
+.twosome_intro, .ikea_intro{
   position: relative;z-index: 0; background: linear-gradient(#282A64, #330428 90%);width: 100%;height: 100vh;
   .home{position: absolute;}
   .bg{
@@ -546,6 +546,10 @@
     @include align-items;
     @include translateX-50;
     position: absolute;z-index: 100; color: $orange;text-align: center;top: 50%;left: 50%;padding-top: 5%;
+  }
+  #twosomeNotice, #ikeaNotice{
+    @include translateX-50;
+    position: absolute;width: 100px;height: 50px;bottom: 10%;left: 50%; background: #3E3653;border-radius: 30px; color: #fff;font-size: 20px;
   }
 }
 
@@ -590,29 +594,93 @@
     .marginLeft2{margin-left: 249px;}
   }
 
+  //공통
+  .link{
+    display: block; width: 344px;height: 88px;border-radius: 44px;font-size: 40px;text-align: center;line-height: 2;transition: all 0.2s;
+  }
+
   .main, .sub1, .sub2{
     @include flex;
     @include justify-content(space-between);
-  }
-  .main{
-    position: relative;
     .fixed{
       position: sticky;top: 0;left: 0;
       .part{font-family: NotoSansKR;font-weight: 500; color: #bcbcbc;line-height: 80px;}
-      .view_site{
-        display: block; width: 344px;height: 88px;border-radius: 44px;border: 3px solid #b842ac;font-size: 40px;color: #b842ac;margin-top: 293px;text-align: center;line-height: 2;transition: all 0.2s;
+      .view_site.link{
+        border: 3px solid #b842ac;color: #b842ac;margin-top: 293px;
         &:hover, &:focus{color: #fff;background: #b842ac;}
       }
     }
-
     .screen_wrap{
-      div{margin-top: 20px;}
+      div + div{margin-top: 100px;}
     }
-
-    .screen{
-      overflow: hidden;border-radius: 34px;
-      .img1{background: url("../images/project/twosome_index.jpg") no-repeat 50% / cover;width: 1014px;height: 617px;}
-      .img2{background: url("../images/project/twosome_index.jpg") no-repeat left 10px bottom 0 / cover;width: 1014px;height: 617px;}
+    .screen{overflow: hidden; border-radius: 34px;width: 1014px;height: 700px;}
+    .img1{
+      @include animation(move_screen 20s ease 1s infinite backwards);
+      background: no-repeat  50% / cover;width: 1014px;height: 2500px;
     }
   }
+  @include keyframes(move_screen){
+    0%{transform: translateY(0);}
+    20%{transform: translateY(-625px);}
+    40%{transform: translateY(-1250px);}
+    60%{transform: translateY(-1800px);}
+    100%{transform: translateY(0);}
+  }
+  @include keyframes(move_screen_long){
+    0%{transform: translateY(0);}
+    20%{transform: translateY(-625px);}
+    40%{transform: translateY(-1250px);}
+    60%{transform: translateY(-1800px);}
+    80%{transform: translateY(-2160px);}
+    100%{transform: translateY(0);}
+  }
+
+
+  .main{
+    position: relative;
+    .screen{
+      .img1{
+        background-image: url("../images/project/twosome_index.jpg");
+      }
+      .img2{background: url("../images/project/twosome_index.jpg") left 0 top 63% / cover;height: 617px;}
+      .img3{background: url("../images/project/twosome_index.jpg") left 0 bottom 0 / cover;height: 617px;}
+    }
+  }
+  .sub1{
+    .screen{
+      .img1{
+        @include animation(move_screen_long 20s ease 1s infinite backwards);
+        background-image: url("../images/project/twosome_coffStory.jpg");height: 2870px;
+      }
+      .img2{background: url("../images/project/twosome_coffStory.jpg") left 0 top 63% / cover;height: 617px;}
+    }
+  }
+  .sub2{
+    .screen{
+      .img1{background-image: url("../images/project/twosome_menu.jpg");}
+      .img2{background: url("../images/project/twosome_menu.jpg") left 0 top 63% / cover;height: 617px;}
+    }
+  }
+  .btn{
+    @include flex;
+    @include justify-content(space-between);
+    position: relative; margin: 0 auto;width: 50%;padding-bottom: 100px;
+    .btn_prev.link, .btn_next.link{
+      border: 3px solid $orange;color: $orange;
+      &:hover, &:focus{color: #fff;background: $orange;}
+    }
+    .btn_top{
+      @include translateY-50;
+      position: absolute;bottom: 0;right: -380px; background: url("../images/project/arrow_top.svg");width: 39px;height: 39px;
+    }
+    #btnClose{position: absolute;bottom: 24px;right: -300px;font-size: 20px;color: #fff;}
+  }
+}
+.bottom{
+  @include flex;
+  @include justify-content(space-between);
+  width: 100%;height: 80px;line-height: 80px;background: #3E3653;font-size: 20px;
+  .clock{font-family: Tourney;font-weight: 300;background: #000;color: #fff;width: 50%;}
+  .copyright{font-family: NotoSansKR;font-weight: 400;text-align: right;padding-right: 70px;box-sizing: border-box;}
+  
 }

@@ -7,6 +7,7 @@ $(document).ready(function () {
       const $closeBtn = $modalBg.find('.md_btn_close');
       const $first = $modalBg.find('[data-link="first"]');
       const $last = $modalBg.find('[data-link="last"]');
+      console.log($first.text())
 
       //transform일어나도록 .on추가
       $modalBg.addClass('on').next().addClass('on');
@@ -21,7 +22,13 @@ $(document).ready(function () {
       //dim동적생성, 모달 보이기, 첫번째 요소에 포커스 강제이동
       $modalBg.parent().before('<div id="dim"></div>');
       const $dim = $('#dim');
-      $dim.stop().fadeIn().next().css('visibility', 'visible').find('[data-link="first"]').focus();
+      //포커스 이동오류 => visibility가 visible로 보이고 나서 포커스를 찾아야 하는데 타이밍이 맞지 않는것 같아요... 그래서 setTimeout()으로 잠깐의 텀을 두고 포커스를 보냅시다
+      // $dim.stop().fadeIn().next().css('visibility', 'visible').find('[data-link="first"]').focus();
+
+      $dim.stop().fadeIn().next().css('visibility', 'visible');
+      setTimeout(function () {
+        $modalBg.find('[data-link="first"]').focus();
+      }, 100);
 
       //닫기버튼 누르기 전까지 포커스 제어
       $first.on('keydown', function (e) {

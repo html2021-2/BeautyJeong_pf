@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 음료 - MENU </title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script:regular" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/sub_common.css">
+    <link rel="stylesheet" href="../assets/css/sub2.css">
+
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/fadeIn.js"></script>
+    <script src="../assets/js/mouseover.js"></script>
+    <script src="../assets/js/tab.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const swiper = new Swiper('#cnt1 .swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                slidesPerView: 3, //한 화면에 보여지는 슬라이더 개수
+                spaceBetween: 100, //슬라이더 사이 공백
+                centeredSlides: true, //슬라이더가 가운데로
+
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                //https://codingbroker.tistory.com/63 참고해서 시도해보기
+
+            });
+
+            $(".swiper-container").each(function (elem, target) {
+                let swp = target.swiper;
+                $(this).hover(function () {
+                    swp.autoplay.stop();
+                }, function () {
+                    swp.autoplay.start();
+                });
+            });
+        });
+
+        function zoomIn(event) {
+            event.target.style.transform = "scale(1.05)";
+            event.target.style.zIndex = 1;
+            event.target.style.transition = "all 0.5s";
+        }
+
+        function zoomOut(event) {
+            event.target.style.transform = "scale(1)";
+            event.target.style.zIndex = 0;
+            event.target.style.transition = "all 0.5s";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#container">본문 바로가기</a>
+    </div>
+    <header id="header" class="bdbox">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../index.html"><img src="../assets/images/common/logo3.png" alt="투썸플레이스"></a>
+            </h1>
+            <ul class="util d_f">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">기업 및 단체 구매</a></li>
+            </ul>
+            <div class="gnb_franchise d_f">
+                <nav id="gnb">
+                    <h2 class="blind">주메뉴</h2>
+                    <ul class="d_f">
+                        <li>
+                            <a href="../story/coff_story.html">TWOSOME</a>
+                            <ul>
+                                <li><a href="../story/coff_story.html">투썸 히스토리</a></li>
+                                <li><a href="../story/coff_story.html">커피 스토리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="drink.html">MENU</a>
+                            <ul>
+                                <li><a href="drink.html">음료</a></li>
+                                <li><a href="drink.html">푸드</a></li>
+                                <li><a href="drink.html">상품</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../index.html">STORE</a>
+                            <ul>
+                                <li><a href="../index.html">국내</a></li>
+                                <li><a href="../index.html">해외</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../index.html">MEMBERSHIP</a>
+                            <ul>
+                                <li><a href="../index.html">멤버십 안내</a></li>
+                                <li><a href="../index.html">제휴 카드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../news/news.html">NEWS</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="" class="franchise bdbox">창업설명회</a>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <div class="title drink">
+            <h2 class="fade_tit">음료</h2>
+            <p class="fade_tit">Twosome Drink</p>
+        </div>
+        <div>
+            <section id="cnt1" class="inner">
+                <nav class="breadcrumb" aria-label="사이트 이동 경로">
+                    <ol class="clearfix">
+                        <li>
+                            <a href="../index.html">
+                                <span class="blind">홈</span>
+                            </a>
+                        </li>
+                        <li>MENU</li>
+                        <li aria-current="page">음료</li>
+                    </ol>
+                </nav>
+                <h3>NEW</h3>
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper 슬라이더 본문 그룹 -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide slide1">
+                            <div class="img_txt">
+                                <a href="">
+                                  <img src="../assets/images/menu/new_hibiscus.png" alt="" onmouseenter="zoomIn(event)"
+                                      onmouseleave="zoomOut(event)">
+                                </a>
+                                <p>히비스커스 시트러스 에이드</p>
+                                <p class="ice"><br>ONLY<BR>ICED!</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <div class="img_txt">
+                                <a href="">
+                                  <img src="../assets/images/menu/new_greengrape.png" alt="" onmouseenter="zoomIn(event)"
+                                      onmouseleave="zoomOut(event)">
+                                </a>
+                                <p>샤인머스켓 청포도 에이드</p>
+                                <p class="ice"><br>ONLY<BR>ICED!</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <div class="img_txt">
+                                <a href="">
+                                    <img src="../assets/images/menu/new_dalgona.png" alt="" onmouseenter="zoomIn(event)"
+                                        onmouseleave="zoomOut(event)">
+                                </a>
+                                <p>달고나 카페라떼</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide4">
+                            <div class="img_txt">
+                                <a href="">
+                                    <img src="../assets/images/menu/new_icecream.png" alt="" onmouseenter="zoomIn(event)"
+                                        onmouseleave="zoomOut(event)">
+                                </a>
+                                <p>아이스크림 카페라떼</p>
+                                <p class="ice"><br>ONLY<BR>ICED!</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide5">
+                            <div class="img_txt">
+                                <a href="">
+                                    <img src="../assets/images/menu/new_coffeeJelly.png" alt="" onmouseenter="zoomIn(event)"
+                                        onmouseleave="zoomOut(event)">
+                                </a>
+                                <p>커피젤리 카페라떼</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide6">
+                            <div class="img_txt">
+                                <a href="">
+                                    <img src="../assets/images/menu/new_grapefruit.png" alt="" onmouseenter="zoomIn(event)"
+                                        onmouseleave="zoomOut(event)">
+                                </a>
+                                <p>자몽 시트러스 프라페</p>
+                                <p class="ice"><br>ONLY<BR>ICED!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons 이전다음버튼-->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+
+            <section id="cnt2" class="inner">
+                <h3 class="blind">커피, 논커피, 티 음료 메뉴 소개</h3>
+                <div id="mnTab">
+                    <ul role="tablist" aria-label="음료 리스트" class="d_f">
+                        <li role="tab" aria-controls="tabpanel1" id="tab1" class="tab first ">COFFEE</li>
+                        <li role="tab" aria-controls="tabpanel2" id="tab2" class="tab">NON COFFEE</li>
+                        <li role="tab" aria-controls="tabpanel3" id="tab3" class="tab last">TEA</li>
+                    </ul>
+                    <div role="tabpanel" aria-labelledby="tab1" id="tabpanel1" class="tabpanel">
+                        <p>*제품 이미지에 마우스를 가져다 대면 영양정보가 표시됩니다(총 제공량: 1잔)</p>
+                        <ul class="d_f">
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-01-americano.jpg" alt=" ">
+                                <p class="koname">카페 아메리카노</p>
+                                <p class="enname">Cafe Americano</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>15</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>5</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-02-espresso.jpg" alt=" ">
+                                <p class="koname">에스프레소</p>
+                                <p class="enname">Espresso</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>10</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>5</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-03-ecp.jpg" alt=" ">
+                                <p class="koname">에스프레소 콘 파나</p>
+                                <p class="enname">Espresso Con Panna</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>90</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>5</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>2</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-04-esp-macchi.jpg" alt=" ">
+                                <p class="koname">에스프레소 마끼아또</p>
+                                <p class="enname">Espresso Macchiato</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>20</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>15</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-05-short-latte.jpg" alt=" ">
+                                <p class="koname">숏 카페 라떼</p>
+                                <p class="enname">Short Cafe Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>110</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>90</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>8</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>5</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-06-caffe-latte.jpg" alt=" ">
+                                <p class="koname">카페 라떼</p>
+                                <p class="enname">Cafe Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>110</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>90</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>8</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>5</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-07-vanilla-latte.jpg" alt=" ">
+                                <p class="koname">바닐라 카페 라떼</p>
+                                <p class="enname">Vanilla Cafe Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>235</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>130</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>30</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>8</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-08-coldbrew-latte.jpg" alt=" ">
+                                <p class="koname">콜드브루 라떼</p>
+                                <p class="enname">Cold Brew Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>70</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>65</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>5</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>4</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-09-imja.jpg" alt=" ">
+                                <p class="koname">흑임자 카페 라떼</p>
+                                <p class="enname">Black Sesame Cafe Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>355</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>130</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>24</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>7</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-10-dalgona.jpg" alt=" ">
+                                <p class="koname">달고나 카페 라떼</p>
+                                <p class="enname">Dalgona Cafe Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>305</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>200</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>43</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>8</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-11-nuga.jpg" alt=" ">
+                                <p class="koname">누가크림 카페 라떼</p>
+                                <p class="enname">Nougat Cream Cafe Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>215</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>130</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>30</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>6</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-12-spanish.jpg" alt=" ">
+                                <p class="koname">스페니쉬 연유 카페 라떼</p>
+                                <p class="enname">Spanish Condensed Milk Cafe Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>320</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>130</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>33</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>11</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-13-cappucino.jpg" alt=" ">
+                                <p class="koname">카푸치노</p>
+                                <p class="enname">Cappuccino</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>145</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>105</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>10</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>7</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-14-caramel-macch.jpg" alt=" ">
+                                <p class="koname">카라멜 마키아또</p>
+                                <p class="enname">Caramel Macchiato</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>235</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>130</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>2</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>8</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-15-mocha.jpg" alt=" ">
+                                <p class="koname">카페 모카</p>
+                                <p class="enname">Cafe Mocha</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>270</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>120</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>27</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>8</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-16-icecream.jpg" alt=" ">
+                                <p class="koname">아이스크림 카페 라떼</p>
+                                <p class="enname">Icecream Cafe Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>210</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>80</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>16</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>6</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-17-caramel-coffe-frappe.jpg" alt=" ">
+                                <p class="koname">카라멜 커피 프라페</p>
+                                <p class="enname">Caramel Coffee Frappe</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>415</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>230</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>36</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>7</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-18-long-black.jpg" alt=" ">
+                                <p class="koname">롱블랙</p>
+                                <p class="enname">Long Black</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>10</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>5</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-19-ice-coffee.jpg" alt=" ">
+                                <p class="koname">아이스 커피</p>
+                                <p class="enname">Iced Coffee</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>10</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>10</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/coffee/c-20-coldbrew.jpg" alt=" ">
+                                <p class="koname">콜드브루</p>
+                                <p class="enname">Cold Brew</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>10</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>15</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" aria-labelledby="tab2" id="tabpanel2" class="tabpanel">
+                        <p>*제품 이미지에 마우스를 가져다 대면 영양정보가 표시됩니다(총 제공량: 1잔)</p>
+                        <ul class="d_f">
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-1-grapefruit.jpg" alt=" ">
+                                <p class="koname">자몽 시트러스 프라페</p>
+                                <p class="enname">Grapefruit Citrus Frappe</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>190</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>50</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>44</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-2-berry-litchi.jpg" alt=" ">
+                                <p class="koname">베리 리치 프라페</p>
+                                <p class="enname">Berry Litchi Frappe</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>210</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>10</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>49</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-3-mango-banana.jpg" alt=" ">
+                                <p class="koname">망고 바나나 라떼</p>
+                                <p class="enname">Mango Banana Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>350</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>45</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>53</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>6</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-4-jeju-malcha.jpg" alt=" ">
+                                <p class="koname">제주 말차 프라페</p>
+                                <p class="enname">Jeju Matcha Frappe</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>410</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>120</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>61</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>9</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-5-royal-milktea.jpg" alt=" ">
+                                <p class="koname">로얄 밀크티 쉐이크</p>
+                                <p class="enname">Royal Milk Tea Shake</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>480</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>140</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>33</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>10</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-6-strawberry-peach.jpg" alt=" ">
+                                <p class="koname">스트로베리 피치 프라페</p>
+                                <p class="enname">Strawberry Peach Frappe</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>250</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>5</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>57</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-7-choco-milk.jpg" alt=" ">
+                                <p class="koname">초코 밀크 쉐이크</p>
+                                <p class="enname">Choco Milk Shake</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>535</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>170</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>36</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>8</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-8-vanilla-milk.jpg" alt=" ">
+                                <p class="koname">바닐라 밀크 쉐이크</p>
+                                <p class="enname">Vanilla Milk Shake</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>485</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>180</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>40</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>9</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-9-sangria.jpg" alt=" ">
+                                <p class="koname">상그리아 에이드</p>
+                                <p class="enname">Sangria Ade</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>250</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>5</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>62</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-10-lemon-sherbet.jpg" alt=" ">
+                                <p class="koname">레몬 서볏 에이드</p>
+                                <p class="enname">Lemon Sherbet Ade</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>210</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>10</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>50</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-11-grapefruit.jpg" alt=" ">
+                                <p class="koname">자몽 에이드</p>
+                                <p class="enname">Grapefruit Ade</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>145</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>5</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>28</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-12-orange.jpg" alt=" ">
+                                <p class="koname">오렌지 에이드</p>
+                                <p class="enname">Orange Ade</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>135</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>40</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>33</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-13-yogurt.jpg" alt=" ">
+                                <p class="koname">요거트 프라페</p>
+                                <p class="enname">Yogurt Frappe</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>275</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>85</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>44</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>5</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-14-mango.jpg" alt=" ">
+                                <p class="koname">망고 프라페</p>
+                                <p class="enname">Mango Frappe</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>415</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>5</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>101</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-15-blueberry-yogurt.jpg" alt=" ">
+                                <p class="koname">블루베리 요거트 드링크</p>
+                                <p class="enname">Blueberry Yogurt Drink</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>255</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>120</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>35</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>7</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-16-plain-yogurt.jpg" alt=" ">
+                                <p class="koname">플레인 요거트 드링크</p>
+                                <p class="enname">Plain Yogurt Drink</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>170</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>95</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>17</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>7</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-17-orange-grapefruit.jpg" alt=" ">
+                                <p class="koname">오렌지 자몽 주스</p>
+                                <p class="enname">Orange Grapefruit Juice</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>110</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>110</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>22</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>3</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-18-kiwi-banana.jpg" alt=" ">
+                                <p class="koname">키위 바나나 주스</p>
+                                <p class="enname">Kiwi Banana Juice</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>190</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>100</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>29</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>2</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-19-chocolate.jpg" alt=" ">
+                                <p class="koname">아이스 초콜릿 라떼</p>
+                                <p class="enname">Iced Chocolate Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>355</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>140</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>30</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>7</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/noncoffee/n-20-sweetpotato.jpg" alt=" ">
+                                <p class="koname">고구마 라떼</p>
+                                <p class="enname">Sweet Potato Latte</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>305</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>140</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>37</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>8</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" aria-labelledby="tab3" id="tabpanel3" class="tabpanel">
+                        <p>*제품 이미지에 마우스를 가져다 대면 영양정보가 표시됩니다(총 제공량: 1잔)</p>
+                        <ul class="d_f">
+                            <li>
+                                <img src="../assets/images/menu/tea/t-1-honeylemon.jpg" alt=" ">
+                                <p class="koname">허니레몬티</p>
+                                <p class="enname">Honey Lemon Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>105</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>0</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>23</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-2-applemint.jpg" alt=" ">
+                                <p class="koname">애플민트티</p>
+                                <p class="enname">Apple Mint Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>105</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>10</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>24</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-3-gnawamint.jpg" alt=" ">
+                                <p class="koname">그나와 민트티</p>
+                                <p class="enname">Gnawa Mint Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>0</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>0</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-4-camomile.jpg" alt=" ">
+                                <p class="koname">카모마일</p>
+                                <p class="enname">Chamomile</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>0</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>0</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-5-creamcaramel.jpg" alt=" ">
+                                <p class="koname">크림 카라멜</p>
+                                <p class="enname">Cream Caramel Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>0</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>0</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-6-frenchearlgrey.jpg" alt=" ">
+                                <p class="koname">프렌치 얼그레이</p>
+                                <p class="enname">French Earl Grey</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>0</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>0</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-71873-blacktea.jpg" alt=" ">
+                                <p class="koname">1837 블랙티</p>
+                                <p class="enname">1837 Black Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>0</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>0</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-8-orangegrapefruit.jpg" alt=" ">
+                                <p class="koname">오렌지 자몽티</p>
+                                <p class="enname">Orange Grapefruit Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>150</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>25</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>36</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>1</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-9-ujalemon.jpg" alt=" ">
+                                <p class="koname">유자 레몬티</p>
+                                <p class="enname">Citron Lemon Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>250</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>40</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>57</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>0</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-royalmilktea.jpg" alt=" ">
+                                <p class="koname">로얄 밀크티</p>
+                                <p class="enname">Royal Milk Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>270</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>180</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>28</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>9</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-bubble-milktea.jpg" alt=" ">
+                                <p class="koname">버블 밀크티</p>
+                                <p class="enname">Bubble Milk Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>300</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>110</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>37</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>6</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../assets/images/menu/tea/t-12-bubblegreentea.jpg" alt=" ">
+                                <p class="koname">버블 밀크 그린티</p>
+                                <p class="enname">Bubble Milk Green Tea</p>
+                                <div class="hover">
+                                    <p>영양정보</p>
+                                    <ul class="nutri d_f">
+                                        <li>
+                                            <p>열량</p>
+                                            <p>400</p>
+                                            <p>Kcal</p>
+                                        </li>
+                                        <li>
+                                            <p>나트륨</p>
+                                            <p>80</p>
+                                            <p>mg</p>
+                                        </li>
+                                        <li>
+                                            <p>당류</p>
+                                            <p>34</p>
+                                            <p>g</p>
+                                        </li>
+                                        <li>
+                                            <p>단백질</p>
+                                            <p>5</p>
+                                            <p>g</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <aside id="banner">
+                <h3 class="blind">WANT한다면 ONE-PICK 투표해</h3>
+                <div class="inner d_f">
+                    <p>EVENT</p>
+                    <div class="txt_r">
+                        <p>앞으로 함께 하고 싶은 투썸플레이스의 캐릭터를 직접 뽑아주세요</p>
+                        <ul class="d_f">
+                            <li>
+                                <a href="https://www.facebook.com/ATWOSOMEPLACE/photos/a.244658855700887/1653574214809337/?type=3&theater"
+                                    target="_blank">이벤트 안내</a>
+                            </li>
+                            <li>
+                                <a href="https://form.office.naver.com/form/responseView.cmd?formkey=ODk5Y2ExNjktMDU0MC00ODVmLWEyODItMzFhMjgzNGJiMDdl&sourceId=urlshare"
+                                    target="_blank">투표하기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer id="footer">
+            <div class="foot_inner">
+                <ul class="contact d_f">
+                    <li><img src="../assets/images/common/footer_headset-solid.svg" alt="고객센터">1577-4410</li>
+                    <li><img src="../assets/images/common/footer_fax.svg" alt="팩스">02-2058-6777</li>
+                    <li><img src="../assets/images/common/footer_envelope.svg" alt="대표이메일"><a
+                            href="">helpmaster@twosome.co.kr</a></li>
+                </ul>
+                <ul class="sns_right d_f">
+                    <li><a href=""><img src="../assets/images/common/footer_facebook-f-brands.svg" alt="페이스북"></a></li>
+                    <li><a href=""><img src="../assets/images/common/footer_instagram-brands.svg" alt="인스타그램"></a></li>
+                    <li><a href=""><img src="../assets/images/common/footer_youtube-brands.svg" alt="유튜브"></a></li>
+                    <li><a href=""><img src="../assets/images/common/footer_sns-app.png" alt="APP"></a></li>
+                </ul>
+                <ul class="foot_link d_f">
+                    <li><a href="">사이트맵</a></li>
+                    <li><a href="">리크루트</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">위치기반서비스 이용약관</a></li>
+                    <li><a href="">이메일 무단수집거부</a></li>
+                    <li><a href="">법적고지</a></li>
+                </ul>
+                <div class="address">
+                    <address>
+                        <span>서울특별시 중구 을지로 170, 8층(을지로4가, 을지로트윈타워) 투썸플레이스(주)</span>
+                        <span>대표이사 : 이영상</span>
+                        <span>개인정보보호책임자 : 장재호</span>
+                        <span>사업자등록번호 : 404-86-01054</span>
+                    </address>
+                    <p>
+                        <span>통신판매업종신고증 : 제 2018-서울중구-0353호</span>
+                        <span>Copyright ⓒ 2020 A TWOSOME PLACE CO. LTD. ALL RIGHTS RESERVED.</span>
+                    </p>
+                </div>
+                <a href="#header" class="btn_top">TOP</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

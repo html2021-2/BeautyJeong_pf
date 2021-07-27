@@ -1,28 +1,28 @@
 $(document).ready(function() {
-  $('#sky h1').each(function () {
-    let wordArray = $(this).html().split(' ');
-    //console.log(wordArray);//(2) ["Beauty's", "Portfolio"]
-    let tagWrite = '';
+    $('#sky h1').each(function () {
+      let wordArray = $(this).html().split(' ');
+      //console.log(wordArray);//(2) ["Beauty's", "Portfolio"]
+      let tagWrite = '';
 
-    for (let i = 0; i < wordArray.length; i++) {
-      $(this).html(''); //기존 태그 우선 지우기
-      let spanArray = wordArray[i].split(''); //한글자씩 잘라서 배열에 저장
-      //console.log(spanArray); //(8) ["B", "e", "a", "u", "t", "y", "'", "s"], (9) ["P", "o", "r", "t", "f", "o", "l", "i", "o"]
-      // 반복문을 통해 각 div 부모 안에 막내 자식으로 span 동적생성
-      tagWrite += ' ';
-      for (let j = 0; j < spanArray.length; j++) {
-        tagWrite += `<span class="smoky">${spanArray[j]}</span>`;
+      for (let i = 0; i < wordArray.length; i++) {
+        $(this).html(''); //기존 태그 우선 지우기
+        let spanArray = wordArray[i].split(''); //한글자씩 잘라서 배열에 저장
+        //console.log(spanArray); //(8) ["B", "e", "a", "u", "t", "y", "'", "s"], (9) ["P", "o", "r", "t", "f", "o", "l", "i", "o"]
+        // 반복문을 통해 각 div 부모 안에 막내 자식으로 span 동적생성
+        tagWrite += ' ';
+        for (let j = 0; j < spanArray.length; j++) {
+          tagWrite += `<span class="smoky">${spanArray[j]}</span>`;
+        }
+        $(this).append(tagWrite);
       }
-      $(this).append(tagWrite);
-    }
-  });
-  
-  // delay 시간 지정
-  $('#sky h1').each(function () {
-    $(this).find('.smoky').each(function (idx) {
-      $(this).css('animationDelay', 1.5 + (idx / 10) + 's');
     });
-  });
+    
+    // delay 시간 지정
+    $('#sky h1').each(function () {
+      $(this).find('.smoky').each(function (idx) {
+        $(this).css('animationDelay', 1.5 + (idx / 10) + 's');
+      });
+    });
   
   setTimeout(function () {
     $('#sky p').fadeIn();
@@ -60,6 +60,7 @@ $(document).ready(function() {
       gsap.to($circle, {top: mouseY - boxPosY - circleHalfH, left: mouseX - boxPosX - circleHalfW, duration: 0.5});
     });
   });
+  //돋보기
   /* const boxPosX = $('.go_link').offset().left;
   const boxPosY = $('.go_link').offset().top;
   const circleHalfW = $('.go_link .circle').outerWidth() / 2;
@@ -72,7 +73,7 @@ $(document).ready(function() {
       const mouseY = e.pageY;
       console.log(mouseX,mouseY);
       gsap.to('.circle', {top: mouseY - boxPosY - circleHalfH, left: mouseX - boxPosX - circleHalfW, duration: 0.5});
-  });
+  }); */
 
   $('.go_link').parent().each(function (idx) {
     $(this).index(idx).children().on('mousemove', function (e) {
@@ -88,6 +89,6 @@ $(document).ready(function() {
       console.log(mouseX,mouseY);
       gsap.to('.circle', {top: mouseY - boxPosY - circleHalfH, left: mouseX - boxPosX - circleHalfW, duration: 0.5});
     });
-  }); */
+  });
 
 });
