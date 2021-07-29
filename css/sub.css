@@ -56,15 +56,20 @@
   align-items: center;
   position: fixed;
   z-index: 500;
-  width: 80px;
-  height: 80px;
   top: 7%;
   left: 5%;
-  border-radius: 50%;
-  background: rgba(251, 229, 25, 0.8);
-  box-shadow: 0px 0px 27px 20px rgba(251, 229, 25, 0.8);
   font-size: 25px;
   /* offset-x | offset-y | blur-radius | spread-radius | color */ }
+  .home, .home span {
+    border-radius: 50%;
+    background: rgba(251, 229, 25, 0.8);
+    box-shadow: 0px 0px 1px 0 rgba(251, 229, 25, 0.7) inset, 0px 0px 27px 20px rgba(251, 229, 25, 0.7); }
+  .home span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center; }
 
 .speech_bubble {
   display: -webkit-box;
@@ -1163,6 +1168,8 @@
       display: -ms-box;
       display: -webkit-flex;
       display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
       font-size: 40px;
       color: #bcbcbc; }
       .introduce .info_cnt li p {
@@ -1171,7 +1178,7 @@
     .introduce .info_cnt li + li {
       padding-top: 50px; }
     .introduce .info_cnt .marginLeft1 {
-      margin-left: 220px; }
+      margin-left: 200px; }
       .introduce .info_cnt .marginLeft1 p span {
         position: relative; }
         .introduce .info_cnt .marginLeft1 p span::after {
@@ -1184,16 +1191,28 @@
           height: 35px;
           top: 50%;
           left: -45px; }
-      .introduce .info_cnt .marginLeft1 .color1 {
+      .introduce .info_cnt .marginLeft1 .color1.twosome {
         margin-left: 50px; }
-        .introduce .info_cnt .marginLeft1 .color1::after {
+        .introduce .info_cnt .marginLeft1 .color1.twosome::after {
           background: #54565a; }
-      .introduce .info_cnt .marginLeft1 .color2 {
+      .introduce .info_cnt .marginLeft1 .color2.twosome {
         margin-left: 80px; }
-        .introduce .info_cnt .marginLeft1 .color2::after {
+        .introduce .info_cnt .marginLeft1 .color2.twosome::after {
           background: #d60037; }
+      .introduce .info_cnt .marginLeft1 .color1.ikea {
+        margin-left: 50px; }
+        .introduce .info_cnt .marginLeft1 .color1.ikea::after {
+          background: #F2CB05; }
+      .introduce .info_cnt .marginLeft1 .color2.ikea {
+        margin-left: 80px; }
+        .introduce .info_cnt .marginLeft1 .color2.ikea::after {
+          background: #0E4970; }
     .introduce .info_cnt .marginLeft2 {
-      margin-left: 249px; }
+      margin-left: 227px; }
+    .introduce .info_cnt .marginLeft3 {
+      margin-left: 422px; }
+    .introduce .info_cnt .marginLeft4 {
+      margin-left: 81px; }
   .introduce .link {
     display: block;
     width: 344px;
@@ -1203,6 +1222,71 @@
     text-align: center;
     line-height: 2;
     transition: all 0.2s; }
+  .introduce .card {
+    position: relative;
+    perspective: 2500px;
+    margin-bottom: 100px;
+    width: 1014px;
+    height: 575px; }
+    .introduce .card > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1014px;
+      height: 575px;
+      transition: all 0.5s;
+      backface-visibility: hidden;
+      transition: transform 1s;
+      transform-style: preserve-3d; }
+      .introduce .card > div p {
+        -webkit-transform: translate(-50%, -50%) translateZ(100px);
+        -moz-transform: translate(-50%, -50%) translateZ(100px);
+        transform: translate(-50%, -50%) translateZ(100px);
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        height: 30%;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        font-family: NotoSansKR;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 30px;
+        line-height: 2;
+        backface-visibility: hidden;
+        text-align: center; }
+    .introduce .card .front {
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      transform: rotateY(0deg); }
+    .introduce .card .back {
+      -webkit-transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+      transform: rotateY(-180deg); }
+    .introduce .card:hover .front, .introduce .card.flip .front {
+      transform: rotateY(180deg); }
+    .introduce .card:hover .back, .introduce .card.flip .back {
+      transform: rotateY(0deg); }
+    .introduce .card .txt_yellow {
+      color: #FFCE00; }
+    .introduce .card .tit {
+      font-size: 30px; }
+  .introduce .hover {
+    font-family: NotoSansKR;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    margin: 100px 0 20px 10px; }
   .introduce .main, .introduce .sub1, .introduce .sub2 {
     display: -webkit-box;
     display: -moz-box;
@@ -1229,16 +1313,20 @@
           background: #b842ac; }
     .introduce .main .screen_wrap div + div, .introduce .sub1 .screen_wrap div + div, .introduce .sub2 .screen_wrap div + div {
       margin-top: 100px; }
-    .introduce .main .screen, .introduce .sub1 .screen, .introduce .sub2 .screen {
+    .introduce .main .screenBig, .introduce .sub1 .screenBig, .introduce .sub2 .screenBig {
       overflow: hidden;
       border-radius: 34px;
       width: 1014px;
       height: 700px; }
+    .introduce .main .screen, .introduce .sub1 .screen, .introduce .sub2 .screen {
+      overflow: hidden;
+      width: 1014px;
+      border-radius: 34px; }
     .introduce .main .img1, .introduce .sub1 .img1, .introduce .sub2 .img1 {
       -webkit-animation: move_screen 20s ease 1s infinite backwards;
       -moz-animation: move_screen 20s ease 1s infinite backwards;
       animation: move_screen 20s ease 1s infinite backwards;
-      background: no-repeat  50% / cover;
+      background: no-repeat 50% 0 / cover;
       width: 1014px;
       height: 2500px; }
 @-webkit-keyframes move_screen {
@@ -1313,30 +1401,93 @@
     transform: translateY(-2160px); }
   100% {
     transform: translateY(0); } }
+@-webkit-keyframes move_screen_ikea {
+  0% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(-625px); }
+  40% {
+    transform: translateY(-1250px); }
+  60% {
+    transform: translateY(-1800px); }
+  80% {
+    transform: translateY(-2460px); }
+  100% {
+    transform: translateY(0); } }
+@-moz-keyframes move_screen_ikea {
+  0% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(-625px); }
+  40% {
+    transform: translateY(-1250px); }
+  60% {
+    transform: translateY(-1800px); }
+  80% {
+    transform: translateY(-2460px); }
+  100% {
+    transform: translateY(0); } }
+@keyframes move_screen_ikea {
+  0% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(-625px); }
+  40% {
+    transform: translateY(-1250px); }
+  60% {
+    transform: translateY(-1800px); }
+  80% {
+    transform: translateY(-2460px); }
+  100% {
+    transform: translateY(0); } }
   .introduce .main {
     position: relative; }
-    .introduce .main .screen .img1 {
+    .introduce .main .screenBig .img1 {
       background-image: url("../images/project/twosome_index.jpg"); }
+    .introduce .main .screenBig .img1.ikeaPC {
+      -webkit-animation: move_screen_ikea 20s ease 1s infinite backwards;
+      -moz-animation: move_screen_ikea 20s ease 1s infinite backwards;
+      animation: move_screen_ikea 20s ease 1s infinite backwards;
+      background-image: url("../images/project/ikea_PC.jpg");
+      height: 3160px; }
     .introduce .main .screen .img2 {
       background: url("../images/project/twosome_index.jpg") left 0 top 63%/cover;
-      height: 617px; }
+      height: 530px; }
     .introduce .main .screen .img3 {
       background: url("../images/project/twosome_index.jpg") left 0 bottom 0/cover;
-      height: 617px; }
-  .introduce .sub1 .screen .img1 {
+      height: 575px; }
+    .introduce .main .screen .img2.ikeaPC {
+      background: url("../images/project/ikea_PC.jpg") left 0 top 25%/cover;
+      height: 530px; }
+    .introduce .main .screen .img3.ikeaPC {
+      background: url("../images/project/ikea_PC.jpg") left 0 top 63%/cover;
+      height: 575px; }
+    .introduce .main .screen .img4 {
+      background: url("../images/project/ikea_PC.jpg") left 0 top 87%/cover;
+      height: 575px; }
+  .introduce .sub1 .screenBig .img1 {
     -webkit-animation: move_screen_long 20s ease 1s infinite backwards;
     -moz-animation: move_screen_long 20s ease 1s infinite backwards;
     animation: move_screen_long 20s ease 1s infinite backwards;
     background-image: url("../images/project/twosome_coffStory.jpg");
     height: 2870px; }
   .introduce .sub1 .screen .img2 {
-    background: url("../images/project/twosome_coffStory.jpg") left 0 top 63%/cover;
-    height: 617px; }
-  .introduce .sub2 .screen .img1 {
+    background: url("../images/project/twosome_coffStory.jpg") left 0 top 86%/cover;
+    height: 760px; }
+  .introduce .sub2 .screenBig .img1 {
     background-image: url("../images/project/twosome_menu.jpg"); }
   .introduce .sub2 .screen .img2 {
-    background: url("../images/project/twosome_menu.jpg") left 0 top 63%/cover;
+    background: url("../images/project/twosome_menu.jpg") left 0 top 19%/cover;
     height: 617px; }
+  .introduce .sub2 .img2.ikeaTb {
+    background: url("../images/project/ikea_tablet.jpg") left 0 top 6%/cover;
+    height: 617px; }
+  .introduce .sub2 .img3.ikeaTb {
+    background: url("../images/project/ikea_tablet.jpg") left 0 top 17%/cover;
+    height: 617px; }
+  .introduce .sub2 iframe {
+    margin-left: 300px;
+    border-radius: 34px; }
   .introduce .btn {
     display: -webkit-box;
     display: -moz-box;
@@ -1370,7 +1521,7 @@
       bottom: 24px;
       right: -300px;
       font-size: 20px;
-      color: #fff; }
+      color: #bcbcbc; }
 
 .bottom {
   display: -webkit-box;
@@ -1385,12 +1536,14 @@
   line-height: 80px;
   background: #3E3653;
   font-size: 20px; }
-  .bottom .clock {
+  .bottom #clock {
     font-family: Tourney;
     font-weight: 300;
-    background: #000;
     color: #fff;
-    width: 50%; }
+    width: 20%;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 10px; }
   .bottom .copyright {
     font-family: NotoSansKR;
     font-weight: 400;

@@ -20,7 +20,9 @@
 <body>
   <div id="twosome_wrap">
     <div class="twosome_intro">
-      <a href="../index.html" class="home">HOME</a>
+      <a href="../index.html" class="home">
+        <span>HOME</span>
+      </a>
       <div class="bg">
         <div class="mountain1"></div>
         <div class="mountain2"></div>
@@ -46,7 +48,7 @@
             </div>
             <div class="marginLeft1">
               Color
-              <p><span class="color1">#54565a</span><span class="color2">#d60037</span></p>
+              <p><span class="color1 twosome">#54565a</span><span class="color2 twosome">#d60037</span></p>
             </div>
           </li>
           <li>
@@ -62,7 +64,11 @@
           <li>
             <div>
               Page
-              <p>main, coffee story, menu, news</p>
+              <p>main, coffee <br>story,  menu, news</p>
+            </div>
+            <div class="marginLeft4">
+              Resolution
+              <p>PC(1920)</p>
             </div>
           </li>
         </ul>
@@ -73,19 +79,42 @@
           <h3>Main Page</h3>
           <div class="part">
             My part: 브랜드 필름, 메뉴 모아보기 <br>
-            Point: Fullpage</div>
+            Point: Fullpage, iframe</div>
           <a href="https://beautyjeong.github.io/project1/index.html" class="view_site link" target="_blank">view site</a>
         </div>
 
         <div class="screen_wrap">
-          <div class="screen">
+          <div class="screenBig">
             <div class="img1"></div>
           </div>
-          <div class="screen">
-            <div class="img2"></div>
+          <p class="hover">*이미지에 마우스를 가져다 대세요.</p> 
+          <div class="card">
+            <div class="front">
+              <p class="tit">브랜드필름</p>
+              <div class="screen">
+                <div class="img2"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- iframe태그: 동영상, title속성 추가(접근성) <br> - 자동재생 슬라이더: 재생/정지 버튼 추가(접근성)</p>
+              <div class="screen">
+                <div class="img2"></div>
+              </div>
+            </div>
           </div>
-          <div class="screen">
-            <div class="img3"></div>
+          <div class="card">
+            <div class="front">
+              <p class="tit">메뉴 모아보기</p>
+              <div class="screen">
+                <div class="img3"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- li태그: display: flex; 한줄에 위치</p>
+              <div class="screen">
+                <div class="img3"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -101,11 +130,24 @@
         </div>
 
         <div class="screen_wrap">
-          <div class="screen">
+          <div class="screenBig">
             <div class="img1"></div>
           </div>
-          <div class="screen">
-            <div class="img2"></div>
+          <p class="hover">*이미지에 마우스를 가져다 대세요.</p> 
+
+          <div class="card">
+            <div class="front">
+              <p class="tit">블랜드 소개</p>
+              <div class="screen">
+                <div class="img2"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- 원두 맛 평가를 커피콩으로 표현: aira-label을 사용하여 %값으로 작성(접근성) <br> - 이전 다음버튼: svg, path, circle태그로 선과 반원을 그림</p>
+              <div class="screen">
+                <div class="img2"></div>
+              </div>
+            </div>
           </div>
           <div class="screen">
             <div class="img3"></div>
@@ -124,11 +166,24 @@
         </div>
 
         <div class="screen_wrap">
-          <div class="screen">
+          <div class="screenBig">
             <div class="img1"></div>
           </div>
-          <div class="screen">
-            <div class="img2"></div>
+          <p class="hover">*이미지에 마우스를 가져다 대세요.</p> 
+
+          <div class="card">
+            <div class="front">
+              <p class="tit">신메뉴, 메뉴 리스트</p>
+              <div class="screen">
+                <div class="img2"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- 사이트 이동경로: aria-label, aria-current="page" 작성(접근성) <br>  - 음료 리스트: 탭컨텐츠 사용, 이미지에 오버 또는 tab으로 이동시 영양정보 표시</p>
+              <div class="screen">
+                <div class="img2"></div>
+              </div>
+            </div>
           </div>
           <div class="screen">
             <div class="img3"></div>
@@ -137,8 +192,8 @@
       </section> 
 
       <div class="btn">
-        <a href="IKEA_introduce.html" class="btn_prev link">Prev Project</a>
-        <a href="IKEA_introduce.html" class="btn_next link">Next Project</a>
+        <a href="ikea_introduce.html" class="btn_prev link" target="_blank">Prev Project</a>
+        <a href="ikea_introduce.html" class="btn_next link" target="_blank">Next Project</a>
         <a href=".ikea_intro" class="btn_top"></a>
         <button type="button" id="btnClose" aria-label="닫기">Close</button>
       </div>

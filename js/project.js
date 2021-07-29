@@ -28,11 +28,11 @@ $(document).ready(function () {
     //console.log(now, yy, mm, dd, day, h, m, s);
     
     //요일을 문자로
-    const week = ['일', '월', '화', '수', '목', '금', '토'];
+    const week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     //console.log(week[day]);
   
     //오전오후 표시
-    const ampm = h < 12? '오전' : '오후';
+    const ampm = h < 12? 'AM' : 'PM';
     //console.log(ampm);
 
     //12시간제로 변경
