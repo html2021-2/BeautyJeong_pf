@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* 투썸 브라우저 지원버전: 크롬 20, 파이어폭스 15, 나머지 10브라우저부터 */
+@font-face{
+    font-family: NtSansKR;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Noto_Sans_KR/NotoSansKR-Light.eot");
+    src: local("Noto Sans KR"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Light.eot?#iefix") format("embeded-opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Light.woff2") format("woff2"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Light.woff") format("woff"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Light.otf") format("opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Light.svg#NotoSansKR") format("svg");
+}
+@font-face{
+    font-family: NtSansKR;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.eot");
+    src: local("Noto Sans KR"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.eot?#iefix") format("embeded-opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.woff2") format("woff2"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.woff") format("woff"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf") format("opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.svg#NotoSansKR") format("svg");
+}
+@font-face{
+    font-family: NtSansKR;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.eot");
+    src: local("Noto Sans KR"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.eot?#iefix") format("embeded-opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.woff2") format("woff2"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.woff") format("woff"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.otf") format("opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.svg#NotoSansKR") format("svg");
+}
+@font-face{
+    font-family: NtSansKR;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.eot");
+    src: local("Noto Sans KR"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.eot?#iefix") format("embeded-opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.woff2") format("woff2"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.woff") format("woff"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.otf") format("opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.svg#NotoSansKR") format("svg");
+}
+
+/* tag reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, th, td, button{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
+ul, ol{list-style: none;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+img{border: none;vertical-align: top;}
+button{border: none;background: none;cursor: pointer;font-family: inherit;font-size: inherit;color: inherit;}
+iframe{border: none;}
+address{font-style: normal;}
+table{border-spacing: 0;border-collapse: collapse;}
+th{font-weight: inherit;}
+header, nav, section, article, footer, aside{display: block;}
+
+body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, sans-serif;line-height: 1;font-weight: 400;font-size: 18px;color: #54565a;letter-spacing: normal;word-break: keep-all;}
+#wrap{overflow: hidden;}
+
+/* common class */
+.f_l{float: left;}
+.f_r{float: right;}
+.p_a{position: absolute;}
+.p_r{position: relative;}
+.d_f{display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
+.clearfix::after{content: "";clear: both;display: block;}
+.blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+.bdbox{-moz-box-sizing: border-box;box-sizing: border-box;}
+.inner{width: 1320px;margin: 0 auto;}
+
+/* skip */
+#skip a{position: absolute;z-index: 1000;left: -9999px;top: 0;}
+#skip a:focus{left: 0;width: 100%;height: 40px;line-height: 40px;text-align: center;background: #fff;color: #54565a;font-weight: 700;}
+
+/* #header */
+#header{position: fixed;width: 100%;background: #2b2b2b;color: #fff;border-bottom: 1px solid #888;height: 110px;z-index: 500;}
+#header::before{content: "";position: absolute;top: 110px;left: 0;width: 100%;height: 0;background: rgba(43, 43, 43, .9);-webkit-transition: height 0.6s;-moz-transition: height 0.6s;-o-transition: height 0.6s;transition: height 0.6s;}
+#header.active::before{height: 175px;}
+#header .inner{position: relative;}
+#header .logo, #header .util{position: absolute;top: 19px;}
+#header .logo{left: 0;}
+#header .logo a img{width: 200px;height: 58px;padding-top: 5px;}
+#header .util{right: 0;color: #ccc;font-size: 14px;}
+#header .util li{position: relative;margin-left: 25px;height: 15px;line-height: 15px;}
+#header .util li + li::before{content: "";position: absolute;top: 0;left: -12px;width: 1px;height: 100%;background: #777;}
+
+#header .gnb_franchise{position: absolute;right: 0;top: 60px;height: 32px;line-height: 32px;text-align: center;}
+#gnb > ul{width: 720px;justify-content: space-around;}
+#gnb > ul > li{position: relative;}
+#gnb ul li a{display: block;}
+#gnb > ul > li > a, #gnb > ul > li > a::after{-webkit-transition: all .2s;-moz-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
+#gnb > ul > li > a{position: relative;font-family: Roboto;font-size: 19px;letter-spacing: 3px;padding-bottom: 18px;}
+#gnb > ul > li:hover > a, #gnb > ul > li > a:focus, #gnb > ul > li.on > a{color: #ff0042;}
+#gnb > ul > li > a::after{content: "";position: absolute;left: 0;bottom: 1px;width: 0;height: 4px;background: #ff0042;}
+#gnb > ul > li:hover > a::after, #gnb > ul > li > a:focus::after, #gnb > ul > li.on > a::after{width: 100%;}
+
+#gnb ul li ul{top: 50px;width: 100%;height: 175px;font-size: 16px;letter-spacing: 2px;color: rgba(255, 255, 255, .6);}
+#gnb ul li ul li:first-child{padding-top: 18px;}
+#gnb ul li ul li + li{padding-top: 10px;}
+#gnb ul li ul li:hover a, #gnb ul li ul li a:focus{color: #fff}
+
+#header .franchise{display: block;background: #54565a url("../images/common/franchise1.png") no-repeat 20px center;width: 140px;letter-spacing: 1.3px;font-size: 13px;text-align: right;border-radius: 10px;margin-left: 48px;padding-right: 20px;}
+
+/* #footer */
+#footer{background: #54565a;height: 250px;color: #fff;}
+#footer .foot_inner{position: relative;margin: 0 300px;height: 250px;}
+.foot_inner .contact{position: absolute;top: 0;left: 0;padding-top: 39px;align-items: center;justify-content: center;font-size: 18px;}
+.foot_inner .contact li + li{padding-left: 44px;}
+.foot_inner .contact li:last-child a:hover, .foot_inner .contact li:last-child a:focus{text-decoration: underline;}
+.foot_inner .contact li img{width: 52px;height: 42px;padding-right: 12px;vertical-align: middle;}
+
+.foot_inner .sns_right{position: absolute;top: 0;right: 0;justify-content: flex-end;margin-top: 43px;}
+.foot_inner .sns_right li{width: 33px;height: 33px;margin-left: 9px;}
+.foot_inner .sns_right li a{display: block;width: 33px;height: 33px;margin-left: 9px;background: #fff;border-radius: 50%;}
+.foot_inner .sns_right li img{padding-top: 4px;padding-left: 2px;}
+.foot_inner .sns_right li img:nth-child(1){width: 29px;height: 24px;}
+.foot_inner .sns_right li img:nth-child(2){width: 26px;height: 21px;}
+.foot_inner .sns_right li img:nth-child(3){width: 26px;height: 20px;}
+.foot_inner .sns_right li img:nth-child(4){width: 32px;height: 32px;}
+.foot_inner .sns_right li a:hover, .foot_inner .sns_right li a:focus{border: 2px solid #d60037;}
+
+.foot_inner .foot_link, .foot_inner .address{font-size: 14px;font-weight: 300;}
+.foot_inner .foot_link{padding: 124px 0 32px 0;}
+.foot_inner .foot_link li a:hover, .foot_inner .foot_link li a:focus{text-decoration: underline;}
+.foot_inner .foot_link li:nth-child(4){font-weight: 500;}
+.foot_inner .foot_link li + li, .foot_inner .address span + span{position: relative;padding-left: 40px;}
+.foot_inner .foot_link li + li::after, .foot_inner .address span + span::after{content: "";position: absolute;top: calc(50% - 5.5px);left: 18px;width: 1px;height: 14px;background: #777;}
+.foot_inner .address P{margin-top: 10px;}
+
+.btn_top{position: absolute;right: 0;bottom: 26px;border: 1px solid #fff;width: 60px;height: 60px;line-height: 80px;text-align: center;font-size: 16px;font-family: Roboto;font-weight: 300;background: url("../images/common/icon_topBtn.png") no-repeat 50% 10px;overflow: hidden;}

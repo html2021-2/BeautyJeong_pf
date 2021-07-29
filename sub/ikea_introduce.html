@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,203 @@
   <link rel="shortcut icon" href="../images/favicon96.ico"><!-- 안드로이드 -->
   <link rel="apple-touch-icon" href="../images/favicon96.ico"><!-- 애플 -->
 
-  <link rel="stylesheet" href="../css/sub_project.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
   <script src="../js/jquery-1.12.4.min.js"></script>
-  <script src="../js/app.js"></script>
-  </head>
-  <body>
-  </body>
+  <script src="../js/project.js"></script>
+</head>
+
+<body>
+  <div id="ikea_wrap">
+    <div class="ikea_intro">
+      <a href="../index.html" class="home">HOME</a>
+      <div class="bg">
+        <div class="mountain1"></div>
+        <div class="mountain2"></div>
+        <div class="mountain3"></div>
+        <div class="star"></div>
+      </div>
+      <div class="txt">
+        저의 프로젝트를 보러 오셨군요!<br>
+        마침 텃밭에 저녁이 찾아왔어요.<br>
+        프로젝트는 밤에 보는 게 더 예쁘답니다.<br>
+      </div>
+      <button type="button" id="ikeaNotice">notice</button>
+    </div>
+
+    <div class="introduce">
+      <section class="info">
+        <h2>IKEA <br> Individual Project</h2>
+        <ul class="info_cnt">
+          <li>
+            <div>
+              Targaet
+              <p>30~40s women</p>
+            </div>
+            <div class="marginLeft1">
+              Color
+              <p><span class="color1 ikea">#F2CB05</span><span class="color2 ikea">#0E4970</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              Design concept
+              <p>modern</p>
+            </div>
+            <div class="marginLeft2">
+              Period
+              <p>one month(2021.06)</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              Page
+              <p>main</p>
+            </div>
+            <div class="marginLeft3">
+              Resolution
+              <p>PC, Tablet, Mobile</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main">
+        <div class="fixed">
+          <h3>PC</h3>
+          <div class="part">
+            Point: Grid, Tab contents</div>
+          <a href="https://beautyjeong.github.io/project2/index.html" class="view_site link" target="_blank">view site</a>
+        </div>
+
+        <div class="screen_wrap">
+          <div class="screenBig">
+            <div class="img1 ikeaPC"></div>
+          </div>
+          <p class="hover">*이미지에 마우스를 가져다 대세요.</p> 
+
+          <div class="card">
+            <div class="front">
+              <p class="tit">Home Furnishing<br> (pc)</p>
+              <div class="screen">
+                <div class="img2 ikeaPC"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- display: grid;</p>
+              <div class="screen">
+                <div class="img2 ikeaPC"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="front">
+              <p class="tit">New/Sale/Best<br> (pc)</p>
+              <div class="screen">
+                <div class="img3 ikeaPC"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- Tab contents</p>
+              <div class="screen">
+                <div class="img3 ikeaPC"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="front">
+              <p class="tit">IKEA Live <br> (pc)</p>
+              <div class="screen">
+                <div class="img4 ikeaPC"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- 이케아 라이브 남은 시간 표현하기 <br> - 사진이 마우스 따라 움직이기</p>
+              <div class="screen">
+                <div class="img4 ikeaPC"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sub1">
+        <div class="fixed">
+          <h3>Tablet</h3>
+          <div class="part">
+            Point: Parallax
+          </div>
+          <a href="https://beautyjeong.github.io/project2/index.html" class="view_site link" target="_blank">view site</a>
+        </div>
+
+        <div class="screen_wrap">
+          <div class="screenBig">
+            <iframe src="../project2/index.html" frameborder="0" width= "1014" height= "700"></iframe>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="sub2">
+        <div class="fixed">
+          <h3>Mobile</h3>
+          <div class="part">
+            Point: Parallax
+          </div>
+          <a href="https://beautyjeong.github.io/project2/index.html" class="view_site link" target="_blank">view site</a>
+        </div>
+
+        <div class="screen_wrap">
+          <div class="screenBig ikea">
+            <iframe src="../project2/index.html" frameborder="0" width= "414" height= "700"></iframe>
+          </div>
+          <p class="hover">*이미지에 마우스를 가져다 대세요.</p> 
+          <div class="card">
+            <div class="front">
+              <p class="tit">IKEA Lab/IKEA App/Sustainability<br> (tablet, mobile)</p>
+              <div class="screen">
+                <div class="img2 ikeaTb"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- polygon태그, points속성 사용하여 도형 생성</p>
+              <div class="screen">
+                <div class="img2 ikeaTb"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="front">
+              <p class="tit">Home Furnishing <br> (tablet, mobile)</p>
+              <div class="screen">
+                <div class="img3 ikeaTb"></div>
+              </div>
+            </div>
+            <div class="back">
+              <p class="txt_yellow">- Parallax</p>
+              <div class="screen">
+                <div class="img3 ikeaTb"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section> 
+
+      <div class="btn">
+        <a href="twosome_introduce.html" class="btn_prev link" target="_blank">Prev Project</a>
+        <a href="twosome_introduce.html" class="btn_next link" target="_blank">Next Project</a>
+        <a href=".ikea_intro" class="btn_top"></a>
+        <button type="button" id="btnClose" aria-label="닫기">Close</button>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div id="clock"></div>
+      <p class="copyright">Copyright&copy; 2021 Beauty_Jeong. All rights reserved</p>
+    </div>
+
+  </div>
+</body>
+
 </html>

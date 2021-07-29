@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NEWS </title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/sub_common.css">
+    <link rel="stylesheet" href="../assets/css/sub2.css">
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/fadeIn.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $hotnews = $(".hotnews3 li");
+            $hotnews.attr('tabindex', 0);
+
+            $hotnews.on({
+                'focusin mouseenter': function () {
+                    $(this).addClass("on");
+                },
+                'focusout mouseleave': function () {
+                    $(this).removeClass("on");
+                }
+            });
+
+            var $board = $(".board tbody tr td a");
+            $board.attr('tabindex', 0);
+
+            $board.on({
+                'focusin mouseenter': function () {
+                    $(this).parents('tr').addClass("on");
+                },
+                'focusout mouseleave': function () {
+                    $(this).parents('tr').removeClass("on");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#container">본문 바로가기</a>
+    </div>
+    <header id="header" class="bdbox">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../index.html"><img src="../assets/images/common/logo.png" alt="투썸플레이스"></a>
+            </h1>
+            <ul class="util d_f">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">기업 및 단체 구매</a></li>
+            </ul>
+            <div class="gnb_franchise d_f">
+                <nav id="gnb">
+                    <h2 class="blind">주메뉴</h2>
+                    <ul class="d_f">
+                        <li>
+                            <a href="../story/coff_story.html">TWOSOME</a>
+                            <ul>
+                                <li><a href="../story/coff_story.html">투썸 히스토리</a></li>
+                                <li><a href="../story/coff_story.html">커피 스토리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../menu/drink.html">MENU</a>
+                            <ul>
+                                <li><a href="../menu/drink.html">음료</a></li>
+                                <li><a href="../menu/drink.html">푸드</a></li>
+                                <li><a href="../menu/drink.html">상품</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../index.html">STORE</a>
+                            <ul>
+                                <li><a href="../index.html">국내</a></li>
+                                <li><a href="../index.html">해외</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../index.html">MEMBERSHIP</a>
+                            <ul>
+                                <li><a href="../index.html">멤버십 안내</a></li>
+                                <li><a href="../index.html">제휴 카드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="news.html">NEWS</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="" class="franchise bdbox">창업설명회</a>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <div class="title news">
+            <h2 class="fade_tit">새소식</h2>
+            <p class="fade_tit">Twosome News</p>
+        </div>
+        <div class="inner">
+            <section id="cnt1">
+                <nav class="breadcrumb" aria-label="사이트 이동 경로">
+                    <ol class="clearfix">
+                        <li>
+                            <a href="../index.html">
+                                <span class="blind">홈</span>
+                            </a>
+                        </li>
+                        <li aria-current="page">NEWS</li>
+                    </ol>
+                </nav>
+                <h3>HOT NEWS</h3>
+                <ul class="hotnews3 d_f">
+                    <li>
+                        <img src="../assets/images/news/hotnews_iF.jpg" alt="iF디자인 어워드 2021 수상 - 패키지 부문 본상 2개 수상">
+                        <div><a href=""><span>소식 보기</span></a></div>
+                    </li>
+                    <li>
+                        <img src="../assets/images/news/hotnews_mask.jpg" alt="마스크 착용 안내문 코로나19 예방을 위하여 음료 및 음식 섭취 시를 제외하고는 매장 직원 및 방문 고객의 매장 내 마스크 착용을 의무화하고 있습니다. 또한 모두의 건강을 위해 다른 고객과의 사회적 거리두기를 실천해 주시기 바랍니다.">
+                        <div><a href=""><span>소식 보기</span></a></div>
+                    </li>
+                    <li>
+                        <img src="../assets/images/news/hotnews_TSstudioOpen.jpg" alt="투썸 스튜디오 OPEN 지금 바로 유튜브 채널 &apos;투썸스튜디오&apos; 구독하고 좋아요&amp;알람설정까지!">
+                        <div><a href=""><span>소식 보기</span></a></div>
+                    </li>
+                </ul>
+            </section>
+            <section id="cnt2">
+                <h3 class="blind">공지 및 안내 사항</h3>
+                <div class="board">
+                    <table>
+                        <caption class="blind">뉴스 게시판</caption>
+                        <colgroup>
+                            <col class="wid15">
+                            <col class="wid15">
+                            <col class="wid50">
+                            <col class="wid20">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>113</td>
+                                <td>안내</td>
+                                <td><a href="">홈페이지 내 온라인 주문 서비스 종료 안내</a></td>
+                                <td>2021.05.06</td>
+                            </tr>
+                            <tr>
+                                <td>112</td>
+                                <td>새소식</td>
+                                <td><a href="">투썸플레이스 유튜브채널 리뉴얼 - 투썸스튜디오 오픈</a></td>
+                                <td>2021.04.20</td>
+                            </tr>
+                            <tr>
+                                <td>111</td>
+                                <td>새소식</td>
+                                <td><a href="">투썸플레이스, 독일 iF 디자인 어워드 2021 패키지 부문 2개 수상</a></td>
+                                <td>2021.04.16</td>
+                            </tr>
+                            <tr>
+                                <td>110</td>
+                                <td>결산공고</td>
+                                <td><a href="">투썸플레이스 제 3기 결산공고</a></td>
+                                <td>2021.03.31</td>
+                            </tr>
+                            <tr>
+                                <td>109</td>
+                                <td>안내</td>
+                                <td><a href="">홈페이지 시스템 정기 점검 안내</a></td>
+                                <td>2021.03.15</td>
+                            </tr>
+                            <tr>
+                                <td>108</td>
+                                <td>안내</td>
+                                <td><a href="">투썸플레이스 고객 개인정보처리방침 변경에 대한 안내</a></td>
+                                <td>2021.03.05</td>
+                            </tr>
+                            <tr>
+                                <td>107</td>
+                                <td>안내</td>
+                                <td><a href="">홈페이지 시스템 정기 점검 안내</a></td>
+                                <td>2021.02.22</td>
+                            </tr>
+                            <tr>
+                                <td>106</td>
+                                <td>안내</td>
+                                <td><a href="">홈페이지 시스템 정기 점검 안내</a></td>
+                                <td>2021.01.29</td>
+                            </tr>
+                            <tr>
+                                <td>105</td>
+                                <td>이벤트</td>
+                                <td><a href="">크리스마스 시즌 진행 Winter Fantasy 이벤트 당첨자 발표</a></td>
+                                <td>2021.01.05</td>
+                            </tr>
+                            <tr>
+                                <td>104</td>
+                                <td>이벤트</td>
+                                <td><a href="">럭키드로우 이벤트 안내 및 진행 매장 리스트</a></td>
+                                <td>2020.12.31</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination d_f" aria-label="공지사항 게시판 페이지 번호">
+                        <a href="" title="이전 페이지"></a>
+                        <ul class="d_f">
+                            <li aria-current="page"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="">6</a></li>
+                            <li><a href="">7</a></li>
+                            <li><a href="">8</a></li>
+                            <li><a href="">9</a></li>
+                            <li><a href="">10</a></li>
+                        </ul>
+                        <a href="" title="다음 페이지"></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <aside id="banner">
+            <h3 class="blind">WANT한다면 ONE-PICK 투표해</h3>
+            <div class="inner d_f">
+                <p>EVENT</p>
+                <div class="txt_r">
+                    <p>앞으로 함께 하고 싶은 투썸플레이스의 캐릭터를 직접 뽑아주세요</p>
+                    <ul class="d_f">
+                        <li>
+                            <a href="https://www.facebook.com/ATWOSOMEPLACE/photos/a.244658855700887/1653574214809337/?type=3&theater" target="_blank">이벤트 안내</a>
+                        </li>
+                        <li>
+                            <a href="https://form.office.naver.com/form/responseView.cmd?formkey=ODk5Y2ExNjktMDU0MC00ODVmLWEyODItMzFhMjgzNGJiMDdl&sourceId=urlshare" target="_blank">투표하기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <footer id="footer">
+        <div class="foot_inner">
+            <ul class="contact d_f">
+                <li><img src="../assets/images/common/footer_headset-solid.svg" alt="고객센터">1577-4410</li>
+                <li><img src="../assets/images/common/footer_fax.svg" alt="팩스">02-2058-6777</li>
+                <li><img src="../assets/images/common/footer_envelope.svg" alt="대표이메일"><a href="">helpmaster@twosome.co.kr</a></li>
+            </ul>
+            <ul class="sns_right d_f">
+                <li><a href="https://www.facebook.com/ATWOSOMEPLACE" target="_blank"><img src="../assets/images/common/footer_facebook-f-brands.svg" alt="페이스북"></a></li>
+                <li><a href="https://www.instagram.com/official_atwosomeplace/" target="_blank"><img src="../assets/images/common/footer_instagram-brands.svg" alt="인스타그램"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q" target="_blank"><img src="../assets/images/common/footer_youtube-brands.svg" alt="유튜브"></a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.cj.twosome" target="_blank"><img src="../assets/images/common/footer_sns-app.png" alt="APP"></a></li>
+            </ul>
+            <ul class="foot_link d_f">
+                <li><a href="">사이트맵</a></li>
+                <li><a href="">리크루트</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">위치기반서비스 이용약관</a></li>
+                <li><a href="">이메일 무단수집거부</a></li>
+                <li><a href="">법적고지</a></li>
+            </ul>
+            <div class="address">
+                <address>
+                    <span>서울특별시 중구 을지로 170, 8층(을지로4가, 을지로트윈타워) 투썸플레이스(주)</span>
+                    <span>대표이사 : 이영상</span>
+                    <span>개인정보보호책임자 : 장재호</span>
+                    <span>사업자등록번호 : 404-86-01054</span>
+                </address>
+                <p>
+                    <span>통신판매업종신고증 : 제 2018-서울중구-0353호</span>
+                    <span>Copyright ⓒ 2020 A TWOSOME PLACE CO. LTD. ALL RIGHTS RESERVED.</span>
+                </p>
+            </div>
+            <a href="#header" class="btn_top">TOP</a>
+        </div>
+    </footer>
+</body>
+
+</html>

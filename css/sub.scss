@@ -24,7 +24,9 @@
   @include flex;
   @include justify-content;
   @include align-items;
-  position: fixed;width: 80px;height: 80px;top: 7%;left: 5%;border-radius: 50%;background: rgba(251, 229, 25, .8);box-shadow: 0px 0px 27px 20px rgba(251, 229, 25, 0.8);font-size: 25px; /* offset-x | offset-y | blur-radius | spread-radius | color */
+  &, span{border-radius: 50%;background: rgba(251, 229, 25, .8);box-shadow: 0px 0px 1px 0 rgba(251, 229, 25, 0.7) inset, 0px 0px 27px 20px rgba(251, 229, 25, 0.7);}
+  position: fixed;z-index: 500; top: 7%;left: 5%; font-size: 25px; /* offset-x | offset-y | blur-radius | spread-radius | color */
+  span{display: block;width: 80px;height: 80px;line-height: 80px;text-align: center;}
 }
 .speech_bubble{
     @include flex;
@@ -67,35 +69,6 @@
   height: 100vh;top: 0;overflow: hidden;
   background: url(../images/common/bg.svg) no-repeat 50% / cover;width: 100%;height: 100vh;
 }
-
-//keyframes
-@include keyframes(move_cloud){
-  0%{transform: translate(-470px);}
-  100%{transform: translate(100%);}
-}
-@include keyframes(move_cloud_back){
-  0%{transform: translate(300px);}
-  100%{transform: translate(-100%);}
-}
-
-@include keyframes(move_down) {
-    0%{transform: translateY(0);}
-    100%{transform: translateY(15px);}
-}
-@include keyframes(move_water) {
-    0%{transform: translateY(0);opacity: 1;}
-    30%{transform: translateY(3px);opacity: 0.5;}
-    100%{transform: translateY(5px);opacity: 0;}
-}
-@include keyframes(swing_apple) {
-    0%{transform: rotate(5deg);}
-    100%{transform: rotate(-5deg);}
-}
-@include keyframes(rotateY) {
-  0%{transform: rotateY(0);}
-  100%{transform: rotateY(360deg);}
-}
-
 
 //skill=====
 .skill{position: relative; width: 100%;height: 1100vh;}
@@ -293,10 +266,8 @@
     background: url("../images/contact/board_big.svg");height: 100%;opacity: 0;
   } 
   .bg.on, .back.on{
-    @include animation(rotateY 1s);
-    opacity: 1;
+    @include animation(rotateY 1s 1 forwards);opacity: 1;
   }
-  // .bg.on, .back.on{@include animation(rotateY 1s 1 forwards);}
   .bg{position: relative;z-index: 950;backface-visibility: hidden;}
   .back{
     position: absolute;z-index: 900; top: 0;left: 0;width: 1411px;height: 677px;
@@ -442,24 +413,18 @@
     }
     .hart.hart1{
       animation-duration: 5s;animation-delay: 2s;
-      top: -12%;left: 33%;
+      top: -16%;left: 42%;
     }
     .hart.hart2{ 
       animation-duration: 3s;animation-delay: 4s;       
       @include transform(scale(0.6) rotate(-15deg));
-      top: -23%;left: 28%;opacity: 0.7;
+      top: -26%;left: 39%;opacity: 0.7;
     }
     .hart.hart3{  
       animation-duration: 2s;animation-delay: 6s;             
       @include transform(scale(0.4) rotate(15deg));
-      top: -31%;left: 33%;opacity: 0.5;
+      top: -34%;left: 40%;opacity: 0.5;
     }
-  }
-
-  @include keyframes (hart) {
-    0%{opacity: 0;}
-    30%,50%{opacity: 1;}
-    100%{opacity: 1;}
   }
 
   .cnt_beauty{position: relative;height: 100%;}
@@ -539,10 +504,6 @@
       &::before{
         @include animation(swing_tail cubic-bezier(0.87, -0.6, 0.24, 1.21) 0.5s infinite alternate);
       }
-      @include keyframes(swing_tail) {
-        0%{transform: rotate(0deg);}
-        100%{transform: rotate(30deg);}
-      }
     }
   }
   .cnt5{
@@ -569,46 +530,224 @@
     }
   }
 }
-@include keyframes(swing_side_hand) {
-  0%{transform: rotate(0);}
-  100%{transform: rotate(22deg);}
-}
-@include keyframes (mouse) {
-  0%,10%,20%,30%{
-    top: 33%;left: 44%;background: url("../images/beauty/mouse_close.svg") no-repeat;width: 15px;height: 11px;
+
+//twosome=====
+.twosome_intro, .ikea_intro{
+  position: relative;z-index: 0; background: linear-gradient(#282A64, #330428 90%);width: 100%;height: 100vh;
+  .home{position: absolute;}
+  .bg{
+    position: relative;z-index: -1; width: 100%;height: 100%;overflow: hidden;
+    .mountain1, .mountain2, .mountain3{position: absolute;left: 0;bottom: 0; background: no-repeat 50% / cover;width: 100%;}
+    .mountain1{background: url("../images/project/mountain1.svg");height: 900px;bottom: 0;}
+    .mountain2{background: url("../images/project/mountain2.svg");height: 712px;}
+    .mountain3{background: url("../images/project/mountain3.svg");height: 700px;}
   }
-  40%,50%,60%{
-    top: 29%;left: 42%;background: url("../images/beauty/mouse_open.svg") no-repeat;width: 27px;height: 32px;
+  .txt{
+    @include flex;
+    @include justify-content;
+    @include align-items;
+    @include translateX-50;
+    position: absolute;z-index: 100; color: $orange;text-align: center;top: 50%;left: 50%;padding-top: 5%;
   }
-  70%,80%,90%,100%{
-    top: 33%;left: 44%;background: url("../images/beauty/mouse_close.svg") no-repeat;width: 15px;height: 11px;
-  }
-}
-@include keyframes (wink) {
-  0%,10%,20%,30%{
-    top: 24%;right: 30%;background: url("../images/beauty/eye_normal.svg") no-repeat;width: 21px;height: 17px;
-  }
-  40%,50%,60%{
-    top: 25%;right: 29%;background: url("../images/beauty/eye_wink.svg") no-repeat;width: 20px;height: 8px;
-  }
-  70%,80%,90%,100%{
-    top: 24%;right: 30%;background: url("../images/beauty/eye_normal.svg") no-repeat;width: 21px;height: 17px;
+  #twosomeNotice, #ikeaNotice{
+    @include translateX-50;
+    position: absolute;width: 100px;height: 50px;bottom: 10%;left: 50%; background: #3E3653;border-radius: 30px; color: #fff;font-size: 20px;
   }
 }
 
-@include keyframes (swing_hand_left) {
-  0%{transform: rotate(15deg);}
-  100%{transform: rotate(-3deg);}
+.introduce{
+  font-family: Tourney;font-size: 30px;font-weight: 300;line-height: 1.2; background: #1E1632;
+  section{padding: 200px 120px;}
+  h2, h3{font-family: TourneyItalic;font-weight: 300; font-size: 90px;color: $orange;line-height: 1.3;}
+  .info{
+    h2, .info_cnt{
+      @include flex;
+      @include align-items;
+    }
+    h2{@include justify-content;text-align: center;}
+  }
+  .info_cnt{
+    @include flex-wrap;
+    margin: 120px 280px;
+    li{
+      @include flex;
+      @include flex-wrap;
+      font-size: 40px;color: #bcbcbc;
+      p{font-size: 50px;color: $lYellow;}
+    }
+    li + li{padding-top: 50px;}
+    .marginLeft1{
+      margin-left: 200px;
+      p span{
+        position: relative;
+        &::after{
+          @include translateY-50;
+          content: "";position: absolute;width: 35px;height: 35px;top: 50%;left: -45px;
+        }
+      }
+      .color1.twosome{
+        margin-left: 50px;
+        &::after{background: #54565a;}
+        }
+      .color2.twosome{
+        margin-left: 80px;
+        &::after{background: #d60037;}
+        }
+      .color1.ikea{
+        margin-left: 50px;
+        &::after{background: #F2CB05;}
+        }
+      .color2.ikea{
+        margin-left: 80px;
+        &::after{background: #0E4970;}
+        }
+    }
+    .marginLeft2{margin-left: 227px;}
+    .marginLeft3{margin-left: 422px;}
+    .marginLeft4{margin-left: 81px;}
+  }
+
+  //공통
+  .link{
+    display: block; width: 344px;height: 88px;border-radius: 44px;font-size: 40px;text-align: center;line-height: 2;transition: all 0.2s;
+  }
+
+  //3d
+  .card{
+    position: relative;perspective: 2500px;margin-bottom: 100px;width: 1014px;height: 575px;
+    > div{
+      position: absolute;top: 0;left: 0;width: 1014px;height: 575px;transition: all 0.5s;backface-visibility: hidden;transition: transform 1s;transform-style: preserve-3d;
+      p{
+        @include transform(translate(-50%, -50%) translateZ(100px));
+        @include flex;
+        @include align-items;
+        @include justify-content;
+        position: absolute;top: 50%;left: 50%;width: 70%;height: 30%;background: rgba(0, 0, 0, .8);color: #fff;font-family: NotoSansKR; font-size: 20px;font-weight: 500;border-radius: 30px;line-height: 2;backface-visibility: hidden;text-align: center;
+      }
+    }
+
+    .front{
+      @include transform(rotateY(0deg));
+    }
+    .back{
+      @include transform(rotateY(-180deg));
+    }
+    &:hover .front, &.flip .front{transform: rotateY(180deg);}
+    &:hover .back, &.flip .back{transform: rotateY(0deg);}
+    .txt_yellow{color: $lYellow}
+    .tit{font-size: 30px;}
+  }
+  .hover{font-family: NotoSansKR;font-weight: 500;font-size: 15px;color: #fff;margin: 100px 0 20px 10px;}
+
+
+  //투썸
+  .main, .sub1, .sub2{
+    @include flex;
+    @include justify-content(space-between);
+    .fixed{
+      position: sticky;top: 0;left: 0;
+      .part{font-family: NotoSansKR;font-weight: 500; color: #bcbcbc;line-height: 80px;}
+      .view_site.link{
+        border: 3px solid #b842ac;color: #b842ac;margin-top: 293px;
+        &:hover, &:focus{color: #fff;background: #b842ac;}
+      }
+    }
+    .screen_wrap{
+      div + div{margin-top: 100px;}
+    }
+    .screenBig{overflow: hidden;border-radius: 34px;width: 1014px;height: 700px;}
+    .screen{overflow: hidden;width: 1014px;border-radius: 34px;}
+    .img1{
+      @include animation(move_screen 20s ease 1s infinite backwards);
+      background: no-repeat 50% 0 / cover;width: 1014px;height: 2500px;
+    }
+  }
+  @include keyframes(move_screen){
+    0%{transform: translateY(0);}
+    20%{transform: translateY(-625px);}
+    40%{transform: translateY(-1250px);}
+    60%{transform: translateY(-1800px);}
+    100%{transform: translateY(0);}
+  }
+  @include keyframes(move_screen_long){
+    0%{transform: translateY(0);}
+    20%{transform: translateY(-625px);}
+    40%{transform: translateY(-1250px);}
+    60%{transform: translateY(-1800px);}
+    80%{transform: translateY(-2160px);}
+    100%{transform: translateY(0);}
+  }
+  @include keyframes(move_screen_ikea){
+    0%{transform: translateY(0);}
+    20%{transform: translateY(-625px);}
+    40%{transform: translateY(-1250px);}
+    60%{transform: translateY(-1800px);}
+    80%{transform: translateY(-2460px);}
+    100%{transform: translateY(0);}
+  }
+
+
+  .main{
+    position: relative;
+    .screenBig{
+      .img1{background-image: url("../images/project/twosome_index.jpg");}
+      .img1.ikeaPC{
+        @include animation(move_screen_ikea 20s ease 1s infinite backwards);
+        background-image: url("../images/project/ikea_PC.jpg");height: 3160px;
+      }
+    }
+    .screen{
+      .img2{background: url("../images/project/twosome_index.jpg") left 0 top 63% / cover;height: 530px;}
+      .img3{background: url("../images/project/twosome_index.jpg") left 0 bottom 0 / cover;height: 575px;}
+      .img2.ikeaPC{background: url("../images/project/ikea_PC.jpg") left 0 top 25% / cover;height: 530px;}
+      .img3.ikeaPC{background: url("../images/project/ikea_PC.jpg") left 0 top 63% / cover;height: 575px;}
+      .img4{background: url("../images/project/ikea_PC.jpg") left 0 top 87% / cover;height: 575px;}
+    }
+  }
+  .sub1{
+    .screenBig{
+      .img1{
+        @include animation(move_screen_long 20s ease 1s infinite backwards);
+        background-image: url("../images/project/twosome_coffStory.jpg");height: 2870px;
+      }
+    }
+    .screen{
+      .img2{background: url("../images/project/twosome_coffStory.jpg") left 0 top 86% / cover;height: 760px;}
+    }
+  }
+  .sub2{
+    .screenBig{
+      .img1{background-image: url("../images/project/twosome_menu.jpg");}
+    }
+    .screen{
+      .img2{background: url("../images/project/twosome_menu.jpg") left 0 top 19% / cover;height: 617px;}
+    }
+    .img2.ikeaTb{background: url("../images/project/ikea_tablet.jpg") left 0 top 6% / cover;height: 617px;}
+    .img3.ikeaTb{background: url("../images/project/ikea_tablet.jpg") left 0 top 17% / cover;height: 617px;}
+
+    iframe{margin-left: 300px;border-radius: 34px;}
+  }
+
+  .btn{
+    @include flex;
+    @include justify-content(space-between);
+    position: relative; margin: 0 auto;width: 50%;padding-bottom: 100px;
+    .btn_prev.link, .btn_next.link{
+      border: 3px solid $orange;color: $orange;
+      &:hover, &:focus{color: #fff;background: $orange;}
+    }
+    .btn_top{
+      @include translateY-50;
+      position: absolute;bottom: 0;right: -380px; background: url("../images/project/arrow_top.svg");width: 39px;height: 39px;
+    }
+    #btnClose{position: absolute;bottom: 24px;right: -300px;font-size: 20px;color: #bcbcbc;}
+  }
 }
-@include keyframes (swing_hand_right) {
-  0%{transform: rotate(-15deg);}
-  100%{transform: rotate(3deg);}
-}
-@include keyframes (swing_arm_left) {
-  0%{transform: rotate(-8deg);}
-  100%{transform: rotate(15deg);}
-}
-@include keyframes (swing_arm_right) {
-  0%{transform: rotate(8deg);}
-  100%{transform: rotate(-15deg);}
+.bottom{
+  @include flex;
+  @include justify-content(space-between);
+  width: 100%;height: 80px;line-height: 80px;background: #3E3653;font-size: 20px;
+  #clock{font-family: Tourney;font-weight: 300;color: #fff;width: 20%;line-height: 30px;text-align: center;padding-top: 10px;}
+  .copyright{font-family: NotoSansKR;font-weight: 400;text-align: right;padding-right: 70px;box-sizing: border-box;}
+  
 }
